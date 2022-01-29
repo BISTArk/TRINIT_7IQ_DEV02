@@ -1,0 +1,36 @@
+{
+  "name": "trinit_7iq_dev02",
+  "version": "1.0.0",
+  "description": "bug tracking system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seedr": "node server/seedr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BISTArk/TRINIT_7IQ_DEV02.git"
+  },
+  "author": "bista-chavan-mansi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BISTArk/TRINIT_7IQ_DEV02/issues"
+  },
+  "homepage": "https://github.com/BISTArk/TRINIT_7IQ_DEV02#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "nodemon": "^2.0.15"
+  }
+}
