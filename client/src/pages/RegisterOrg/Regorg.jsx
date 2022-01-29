@@ -41,7 +41,9 @@ function Regorg() {
     };
 
   return <div className="regpage">
+      <div className="sidepic">
 
+      </div>
     <div className="mainform">
       <div className="headerReg">
       <h1 className="regorgHead">Create </h1>
