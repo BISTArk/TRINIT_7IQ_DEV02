@@ -2,6 +2,7 @@ import "./Landing.css"
 import bugImg from '../../assets/bug.png'
 import orgImg from '../../assets/bugSvg2.svg'
 import userImg from '../../assets/bugSvg.svg'
+import { Link } from "react-router-dom"
 
 
 function Landing() {
@@ -25,7 +26,7 @@ function Landing() {
         <p>
         Register your Organization <br/> on the Bug tracking system and<br/> add employees
         </p>
-        <button className="login-btn">Admin Login</button>
+        <Link to='/logorg'><button className="login-btn">Admin Login</button></Link>
       </section>
       <section className="user">
       <img  src={userImg} className="userImg"></img>
