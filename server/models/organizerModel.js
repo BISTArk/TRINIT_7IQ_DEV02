@@ -1,30 +1,16 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
-const userSchema = mongoose.Schema(
+const organizerSchema = mongoose.Schema(
   {
-    username: {
-      type: String,
-      unique: true,
-      required: true,
-    },
     name: {
       type: String,
       required: true,
-    },
-    email: {
-      type: String,
       unique: true,
-      required: true,
     },
     password: {
       type: String,
       required: true,
-    },
-    employee: {
-      type: String,
-      enum: ["s", "a", "b", "x"],
-      default: "x",
     },
     bugs: {
       type: [mongoose.Schema.Types.ObjectId],
@@ -37,11 +23,11 @@ const userSchema = mongoose.Schema(
   }
 );
 
-userSchema.methods.passwordVerification = async function (enteredPassword) {
+organizerSchema.methods.passwordVerification = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-userSchema.pre("save", async function (next) {
+organizerSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();
   }
@@ -50,6 +36,6 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-const User = mongoose.model("User", userSchema);
+const Organizer = mongoose.model("Organizer", organizerSchema);
 
-export default User;
+export default Organizer;
