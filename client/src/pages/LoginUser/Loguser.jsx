@@ -69,7 +69,7 @@ function LogUser() {
                     
                     <Link to="/reguser">
                     <button className="loginorg">
-                        Create
+                        Register
                     </button>
                     </Link>
                 </div>
