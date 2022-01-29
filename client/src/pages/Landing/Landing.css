@@ -90,7 +90,7 @@ padding-bottom: 7rem;
             .create-btn{
                 border: none;
                 outline: none;
-                width: 30%;
+                width: 100%;
                
                 padding: 1.2rem;
                 background-color: #8a73ff;
@@ -101,7 +101,21 @@ padding-bottom: 7rem;
                 border-radius: 12px;
                 transition: 0.3s;
             }
-            .create-btn:hover{
+            .create-btn2{
+                border: none;
+                outline: none;
+                width: 110%;
+               
+                padding: 1.2rem;
+                background-color: #8a73ff;
+                color: #fff;
+                font-family: 'MontSemi';
+                font-size: 1.3rem;
+                cursor: pointer;
+                border-radius: 12px;
+                transition: 0.3s;
+            }
+            .create-btn:hover,.create-btn2:hover{
                 background-color: #E1A3FF;
                 cursor: pointer;
             }

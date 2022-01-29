@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./loguser.css"
+import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 
 function LogUser() {
@@ -42,7 +43,9 @@ function LogUser() {
 
   return <div className="regpage">
       <div className="sidepic">
-
+      <Link to="/">
+          <img src={back} alt="" className="backImg" />
+          </Link>
       </div>
     <div className="mainform">
       <div className="headerReg">

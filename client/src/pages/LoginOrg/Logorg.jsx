@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./logorg.css";
-
+import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 
 function LogOrg() {
@@ -41,7 +41,11 @@ function LogOrg() {
 
   return (
     <div className="regpage">
-      <div className="sidepic"></div>
+      <div className="sidepic">
+        <Link to="/">
+          <img src={back} alt="" className="backImg" />
+          </Link>
+      </div>
       <div className="mainform">
         <div className="headerReg">
           <h1 className="regorgHead">Admin Login</h1>
