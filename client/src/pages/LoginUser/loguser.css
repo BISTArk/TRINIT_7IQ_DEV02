@@ -87,6 +87,14 @@
     font-size: 1.5rem;
     font-weight: 500;
 }
+.alreadyUser{
+    position: relative;
+    left: 190px;
+    color: #E1A3FF;
+    top: -10px;
+    font-family: 'MontSemi';
+
+}
 .createorg{
     border: none;
     outline: none;

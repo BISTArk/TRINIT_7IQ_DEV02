@@ -82,7 +82,7 @@ function LogUser() {
                     }}
                   />
         </div>
-        <span className="already">New to Bug tracker?</span>
+        <span className="alreadyUser">New to Bug tracker?</span>
         <div className="buttonsReg">
                <button className=" createorg">
                           Log In

@@ -21,12 +21,9 @@ function Regorg() {
 
   return <div className="regpage">
       <div className="sidepic">
-<<<<<<< HEAD
       <Link to="/">
           <img src={back} alt="" className="backImg" />
           </Link>
-=======
->>>>>>> 544d0f5331d0c738af1b475ec448d109c0b56f8d
       </div>
     <div className="mainform">
       <div className="headerReg">
