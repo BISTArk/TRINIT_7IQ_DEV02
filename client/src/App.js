@@ -5,6 +5,11 @@ import Register from "./components/Register.js";
 
 function App() {
   return (
+<<<<<<< HEAD
+    <div className="App">
+      
+    </div>
+=======
     <Router>
       {/* <Header /> */}
       <main>
@@ -15,6 +20,7 @@ function App() {
       {/* <Footer/> */}
     </Router>
 
+>>>>>>> fc442d3cdf2e474b947ae53aebd9ddeba424db4d
   );
 }
 
