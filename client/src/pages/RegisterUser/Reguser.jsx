@@ -10,6 +10,7 @@ function RegUser() {
   const [name, setname] = useState("");
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
+  const [email, setemail] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +20,6 @@ function RegUser() {
 
   return (
     <div className="regpage">
-      
       <div className="sidepic">
       <Link to="/">
           <img src={back} alt="" className="backImg" />
@@ -64,6 +64,26 @@ function RegUser() {
               value={name}
               onChange={(e) => {
                 setname(e.target.value);
+              }}
+            />
+          </div>
+          <div className="form-field-reg">
+            <label
+              htmlFor="name"
+              className="input-text"
+              placeholder="Enter organization name"
+            >
+              Name
+            </label>
+            <br />
+            <input
+              type="mail"
+              name="email"
+              placeholder="Enter your email"
+              className="RegInput"
+              value={email}
+              onChange={(e) => {
+                setemail(e.target.value);
               }}
             />
           </div>

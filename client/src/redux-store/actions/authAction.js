@@ -105,6 +105,7 @@ export const signInOrganizer =
         type: SIGNIN_SUCCESS,
         payload: data,
       });
+      
     } catch (error) {
       dispatch({
         type: SIGNIN_FAIL,
