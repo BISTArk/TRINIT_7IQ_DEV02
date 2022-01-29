@@ -46,26 +46,23 @@ function LogUser() {
       </div>
     <div className="mainform">
       <div className="headerReg">
-      <h1 className="regorgHead">Create </h1>
-        <h1 className="regorgHead">Organization</h1>
+      <h1 className="regorgHead">User Login</h1>
+       
         </div>
           <form className="reg-form">
           <div className="form-field-reg">
-                  <label htmlFor="name" className="input-text" placeholder="Enter organization name">
-                    Organization Name 
+                  <label htmlFor="username" className="input-text" >
+                    Username
                   </label>
-          
+          <br />
                   <input
                     type="text"
-                    name="orgname"
-                    placeholder="Enter Organization Name"
+                    name="username"
+                    placeholder="Enter username"
                     className="RegInput"
-                    value={name}
-                    onChange={(e) => {
-                      setname( e.target.value);
-                    }}
+                  
                   />
-                </div>
+        </div>
                 <div className="form-field-reg">
                   <label htmlFor="password" className="input-text ">
                     Password 
@@ -81,15 +78,17 @@ function LogUser() {
                       setpassword(e.target.value);
                     }}
                   />
-                </div>
-                <div className="buttonsReg">
-                    <button className="createorg" onClick={handleSubmit}>
-                        Create
-                    </button>
-                    <Link to="/logorg">
-                      <button className="loginorg">
+        </div>
+        <span className="already">New to Bug tracker?</span>
+        <div className="buttonsReg">
+               <button className=" createorg">
                           Log In
                       </button>
+                    
+                    <Link to="/regorg">
+                    <button className="loginorg" onClick={handleSubmit}>
+                        Create
+                    </button>
                     </Link>
                 </div>
           </form>

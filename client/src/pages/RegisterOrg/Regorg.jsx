@@ -81,7 +81,8 @@ function Regorg() {
                       setpassword(e.target.value);
                     }}
                   />
-                </div>
+        </div>
+        <span className="already">Got an organization?</span>
                 <div className="buttonsReg">
                     <button className="createorg" onClick={handleSubmit}>
                         Create
