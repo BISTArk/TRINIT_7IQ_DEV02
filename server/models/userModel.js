@@ -21,10 +21,14 @@ const userSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    employee: {
-      type: String,
-      enum: ["s", "a", "b", "x"],
-      default: "x",
+    employeeLevel: {
+      type: Number,
+      enum: [0, 1, 2, 3, 4],
+      default: 0, // 0 -> normal user
+    },
+    organization: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Organizer",
     },
     bugs: {
       type: [mongoose.Schema.Types.ObjectId],
