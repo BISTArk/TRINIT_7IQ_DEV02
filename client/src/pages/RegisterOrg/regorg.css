@@ -99,6 +99,7 @@
     border-radius: 12px;
     transition: 0.3s;
 }
+
 .buttonsReg{
     display: flex;
     flex-direction: row;
