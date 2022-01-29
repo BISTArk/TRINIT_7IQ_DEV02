@@ -32,7 +32,7 @@ export const updateThreatLevel = expressAsyncHandler(async (req, res) => {
     res.status(401).send({ msg: "Bug does not exist" });
     throw new Error("Bug does not exist");
   }
-  const bugSearch = (org_id) => {
+  const bugSearch = async (org_id) => {
     const org = await Organizer.findOne({ _id: org_id });
     return !org.bugs.some(bug_id);
   };
@@ -60,7 +60,7 @@ export const updateStatus = expressAsyncHandler(async (req, res) => {
     res.status(401).send({ msg: "Bug does not exist" });
     throw new Error("Bug does not exist");
   }
-  const bugSearch = (org_id) => {
+  const bugSearch = async (org_id) => {
     const org = await Organizer.findOne({ _id: org_id });
     return !org.bugs.some(bug_id);
   };
@@ -83,7 +83,7 @@ export const updateStatus = expressAsyncHandler(async (req, res) => {
 });
 
 // DELETE bug
-export const deleteBug = asyncHandler(async (req, res) => {
+export const deleteBug = expressAsyncHandler(async (req, res) => {
   const { id } = req.params;
   const success = await Bugs.findByIdAndRemove(id);
   if (success) {
@@ -95,7 +95,7 @@ export const deleteBug = asyncHandler(async (req, res) => {
 });
 
 // GET bug
-export const getBug = asyncHandler(async (req, res) => {
+export const getBug = expressAsyncHandler(async (req, res) => {
   const bugs = await Bugs.find({});
   if (bugs) {
     res.json(bugs);

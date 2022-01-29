@@ -18,7 +18,7 @@ function Regorg() {
         alert("Password should be a minimum of 6 characters long");
       else {
         const data = {
-          Name: name,
+          name: name,
           password:password,
         };
         const options = {
@@ -41,9 +41,7 @@ function Regorg() {
     };
 
   return <div className="regpage">
-      <div className="sidepic">
 
-      </div>
     <div className="mainform">
       <div className="headerReg">
       <h1 className="regorgHead">Create </h1>
