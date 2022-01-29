@@ -87,10 +87,22 @@
     font-size: 1.5rem;
     font-weight: 500;
 }
-.createorg,.loginorg{
+.createorg{
     border: none;
     outline: none;
     width: 20%;
+    padding: 1.2rem;
+    background-color: #8a73ff;
+    color: #fff;
+    font-family: 'MontBold';
+    font-size: 1.2rem;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.loginorg{
+    border: none;
+    outline: none;
+    width: 160%;
     padding: 1.2rem;
     background-color: #8a73ff;
     color: #fff;
