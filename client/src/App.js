@@ -1,4 +1,4 @@
-import store from './redux-store/store'
+// import {getState} from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./components/Register.js";
 import Landing from "./pages/Landing/Landing.jsx";
@@ -8,7 +8,7 @@ import Loguser from "./pages/LoginUser/Loguser.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
 
 function App() {
-    console.log(store.getState())
+    // console.log(getState())
     return (
     <Router>
       {/* <Header /> */}
