@@ -3,10 +3,10 @@ const rounds = 7;
 
 const users = [
   {
-    name: "Bruce Wayne",
-    email: "brucewayne@gmail.com",
-    password: bcrypt.hashSync("dummypass", rounds),
-    isSuperAdmin: true,
+    username: "dummyuser",
+    name: "Dummy user",
+    email: "bdummyuser@gmail.com",
+    password: bcrypt.hashSync("password", rounds),
   },
 ];
 

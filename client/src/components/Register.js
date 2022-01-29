@@ -7,6 +7,7 @@ const Register = () => {
   const initialState = {
     username: "",
     email: "",
+    name: "",
     password: "",
   };
   const [newEntry, setNewEntry] = useState(initialState);
@@ -29,6 +30,17 @@ const Register = () => {
           onChange={(e) =>
             setNewEntry({ ...newEntry, username: e.target.value })
           }
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">
+          Name
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          aria-describedby="emailHelp"
+          onChange={(e) => setNewEntry({ ...newEntry, name: e.target.value })}
         />
       </div>
       <div class="mb-3">
