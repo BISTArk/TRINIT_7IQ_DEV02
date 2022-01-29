@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import User from "./userModel";
+import User from "./userModel.js";
 
 const organizerSchema = mongoose.Schema(
   {
