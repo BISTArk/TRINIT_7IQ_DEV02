@@ -99,6 +99,14 @@
     border-radius: 12px;
     transition: 0.3s;
 }
+.already{
+    position: relative;
+    left: 100px;
+    color: #E1A3FF;
+    top: -10px;
+    font-family: 'MontSemi';
+
+}
 .loginorg{
     border: none;
     outline: none;
