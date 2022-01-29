@@ -1,10 +1,20 @@
-import Landing from "./pages/Landing";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Register from "./components/Register.js";
 
 function App() {
   return (
-    <div className="App">
-      <Landing/>
-    </div>
+    <Router>
+      {/* <Header /> */}
+      <main>
+        <Routes>
+          <Route path='/signup' element={<Register/>} />
+        </Routes>
+      </main>
+      {/* <Footer/> */}
+    </Router>
+
   );
 }
 
