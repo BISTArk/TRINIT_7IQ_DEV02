@@ -17,7 +17,7 @@ function LogUser() {
       dispatch(signInOrganizer(data));
     };
 
-  return <div className="regpage">
+  return <div className="regpage3">
       <div className="sidepic">
       <Link to="/">
           <img src={back} alt="" className="backImg" />

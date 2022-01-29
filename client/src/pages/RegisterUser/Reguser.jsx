@@ -18,7 +18,7 @@ function RegUser() {
   };
 
   return (
-    <div className="regpage">
+    <div className="regpage2">
       
       <div className="sidepic">
       <Link to="/">

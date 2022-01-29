@@ -13,12 +13,12 @@ function LogOrg() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { name, password };
+    const data = { username:name, password:password };
     dispatch(signInOrganizer(data));
   };
 
   return (
-    <div className="regpage">
+    <div className="regpage4">
       <div className="sidepic">
         <Link to="/">
           <img src={back} alt="" className="backImg" />
