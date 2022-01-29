@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+import User from "./userModel";
 
 const organizerSchema = mongoose.Schema(
   {
@@ -12,18 +13,28 @@ const organizerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    bugs: {
-      type: [mongoose.Schema.Types.ObjectId],
-      required: true,
-      ref: "Bugs",
-    },
+    bugs: [
+      {
+        type: [mongoose.Schema.Types.ObjectId],
+        required: true,
+        ref: "Bugs",
+      },
+    ],
+    employee: [
+      {
+        id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: User },
+        role: { type: Number, enum: [1, 2, 3, 4] },
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
 
-organizerSchema.methods.passwordVerification = async function (enteredPassword) {
+organizerSchema.methods.passwordVerification = async function (
+  enteredPassword
+) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
