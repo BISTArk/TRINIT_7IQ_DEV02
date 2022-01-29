@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./global.css"
+import "./regorg.css"
 
 function Regorg() {
 
@@ -11,11 +11,12 @@ function Regorg() {
 
       </div>
       <div className="mainform">
-          <h1>Create Organization</h1>
+      <h1 className="regorgHead">Create </h1>
+      <h1 className="regorgHead">Organization</h1>
           <form className="reg-form">
           <div className="form-field-reg">
-                  <label htmlFor="name" className="input-text">
-                    Name *
+                  <label htmlFor="name" className="inputBox" placeholder="Enter organization name">
+                    Organization Name *
                   </label>
                   <input
                     type="text"

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+@font-face {
+    font-family: 'MontBold';
+    src: url('../../assets/fonts/Mont-HeavyDEMO.otf');
+}
+.regpage{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../assets/bg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidepic{
+  
+    flex: 4;
+}
+.regorgHead{
+    font-family: 'MontBold';
+    white-space: pre-line;
+    font-size: 3.8rem;
+    font-weight: 500;
+    color: #8B73FF;
+
+}
+
+.mainform{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+}
+inputBox{
+    width: 100%;
+    height: 5rem;
+    border-radius: 5px;
+    border: 1px solid #8B73FF;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'MontBold';
+    color: #8B73FF;
+    margin-bottom: 1rem;                        
+}
