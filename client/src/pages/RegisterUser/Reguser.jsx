@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./reguser.css";
+import "./reguser.css"
+import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../../redux-store/actions/authAction.js";
@@ -18,10 +19,16 @@ function RegUser() {
 
   return (
     <div className="regpage">
-      <div className="sidepic"></div>
-      <div className="mainform">
-        <div className="headerReg">
-          <h1 className="regorgHead">Register </h1>
+      
+      <div className="sidepic">
+      <Link to="/">
+          <img src={back} alt="" className="backImg" />
+          </Link>
+      </div>
+    <div className="mainform">
+      <div className="headerReg">
+      <h1 className="regorgHead">Register </h1>
+        
         </div>
         <form className="reg-form">
           <div className="form-field-reg">

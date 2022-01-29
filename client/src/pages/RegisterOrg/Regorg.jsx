@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./regorg.css"
+import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUpOrganizer } from "../../redux-store/actions/authAction.js";
@@ -20,6 +21,9 @@ function Regorg() {
 
   return <div className="regpage">
       <div className="sidepic">
+      <Link to="/">
+          <img src={back} alt="" className="backImg" />
+          </Link>
       </div>
     <div className="mainform">
       <div className="headerReg">

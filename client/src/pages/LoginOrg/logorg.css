@@ -15,6 +15,18 @@
     font-family: 'Mont';
     src: url('../../assets/fonts/Mont-ExtraLightDEMO.otf');
 }
+.backImg{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    transition: 0.3s;
+    }
+.backImg:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
 
 .regpage{
     display: flex;
