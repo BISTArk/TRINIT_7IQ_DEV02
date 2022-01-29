@@ -85,7 +85,7 @@ export const updateStatus = expressAsyncHandler(async (req, res) => {
 // DELETE bug
 export const deleteBug = asyncHandler(async (req, res) => {
   const { id } = req.params;
-  const success = await Bug.findByIdAndRemove(id);
+  const success = await Bugs.findByIdAndRemove(id);
   if (success) {
     res.json({ message: "Bug deleted successfully." });
   } else {
@@ -96,7 +96,7 @@ export const deleteBug = asyncHandler(async (req, res) => {
 
 // GET bug
 export const getBug = asyncHandler(async (req, res) => {
-  const bugs = await Bug.find({});
+  const bugs = await Bugs.find({});
   if (bugs) {
     res.json(bugs);
   } else {
