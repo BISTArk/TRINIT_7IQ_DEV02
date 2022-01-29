@@ -18,6 +18,7 @@ import { server_base_url } from "../../shared.js";
 export const signUpUser =
   ({ username, name, email, password }) =>
   async (dispatch) => {
+    console.log("signUpUser");
     try {
       dispatch({
         type: REGISTER_USER_REQUEST,
@@ -53,6 +54,7 @@ export const signUpUser =
 export const signUpOrganizer =
   ({ name, password }) =>
   async (dispatch) => {
+    console.log("signUpOrganizer");
     try {
       dispatch({
         type: REGISTER_ORGANIZER_REQUEST,
@@ -70,6 +72,7 @@ export const signUpOrganizer =
         type: REGISTER_ORGANIZER_SUCCESS,
         payload: data,
       });
+      console.log(data);
     } catch (error) {
       console.log(error.response);
       dispatch({
