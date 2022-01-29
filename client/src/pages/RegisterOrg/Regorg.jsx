@@ -10,14 +10,17 @@ function Regorg() {
       <div className="sidepic">
 
       </div>
-      <div className="mainform">
+    <div className="mainform">
+      <div className="headerReg">
       <h1 className="regorgHead">Create </h1>
-      <h1 className="regorgHead">Organization</h1>
+        <h1 className="regorgHead">Organization</h1>
+        </div>
           <form className="reg-form">
           <div className="form-field-reg">
-                  <label htmlFor="name" className="inputBox" placeholder="Enter organization name">
-                    Organization Name *
+                  <label htmlFor="name" className="input-text" placeholder="Enter organization name">
+                    Organization Name 
                   </label>
+          
                   <input
                     type="text"
                     name="orgname"
@@ -31,8 +34,9 @@ function Regorg() {
                 </div>
                 <div className="form-field-reg">
                   <label htmlFor="password" className="input-text ">
-                    Username *
-                  </label>
+                    Password 
+          </label>
+          <br />
                   <input
                     type="password"
                     name="password"
@@ -44,7 +48,7 @@ function Regorg() {
                     }}
                   />
                 </div>
-                <div className="form-field-reg">
+                <div className="buttonsReg">
                     <button className="createorg">
                         Create
                     </button>
