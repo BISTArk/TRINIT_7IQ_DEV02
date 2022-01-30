@@ -68,6 +68,11 @@ td.showbugg:hover{
 }
 table{
     /* border-collapse: collapse; */
+    width: 80%;
+}
+.lessBold{
+    font-weight: 100;
+    font-size: 0.6 rem;
 }
 h3{
     font-family: 'MontSemi';

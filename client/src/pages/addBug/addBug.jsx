@@ -27,7 +27,10 @@ function AddBug() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(formd);
+    if(window.confirm('Raise the bug?')){
+      window.location.href ="/home";
+    };
+    console.log(formd); 
     const data = {
       title: formd.title,
       content: formd.content,

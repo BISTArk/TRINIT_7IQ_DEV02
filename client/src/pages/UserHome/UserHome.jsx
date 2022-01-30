@@ -66,33 +66,26 @@ function Home() {
            
             <tr>
             
-                <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
+                <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>Add responsiveness </Link> </td>
                
-              <td>cell2_1</td>
-              <td>cell3_1</td>
-              <td>cell4_1</td>
-              <td>cell5_1</td>
-              <td>cell5_1</td>
-              <td>cell6_1</td>
+              <td className="lessBold">Make the login page responsive, the input tags are out of place</td>
+              <td>Sprinklr</td>
+              <td>21-2-2022</td>
+              <td>High</td>
+              <td>24-2-2022</td>
+              <td>Pending</td>
               </tr>
               
             <tr>
-            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
-              <td>cell2_2</td>
-              <td>cell3_2</td>
-              <td>cell4_2</td>
-              <td>cell5_2</td>
-              <td>cell5_1</td>
-              <td>cell6_2</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>APIs are not working </Link> </td>
+              <td className="lessBold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</td>
+              <td>TCS</td>
+              <td>12-12-2021</td>
+              <td>Low</td>
+              <td>2-3-2022</td>
+              <td>Resolved</td>
             </tr>
             <tr>
-            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
-              <td>cell2_3</td>
-              <td>cell3_3</td>
-              <td>cell4_3</td>
-              <td>cell5_3</td>
-              <td>cell5_1</td>
-              <td>cell6_3</td>
             </tr>
           </tbody>
         </table>
@@ -112,33 +105,36 @@ function Home() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
-              <td>cell2_1</td>
-              <td>cell3_1</td>
-              <td>cell4_1</td>
-              <td>cell5_1</td>
-              <td>cell5_1</td>
-              <td>cell6_1</td>
+          <tr>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>Docker Issue</Link> </td>
+              <td>The div is not working pls help</td>
+              <td>Micro</td>
+              <td>13-01-2022</td>
+              <td>TBD</td>
+              <td>Yet to assign</td>
+              <td>Pending</td>
             </tr>
             <tr>
-            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
-              <td>cell2_2</td>
-              <td>cell3_2</td>
-              <td>cell4_2</td>
-              <td>cell5_2</td>
-              <td>cell5_1</td>
-              <td>cell6_2</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>Bug 5</Link> </td>
+              <td>Docker container issues</td>
+              <td>Micro</td>
+              <td>13-01-2022</td>
+              <td>Low</td>
+              <td>14-01-2022</td>
+              <td>Resolved</td>
             </tr>
+          
             <tr>
-            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
-              <td>cell2_3</td>
-              <td>cell3_3</td>
-              <td>cell4_3</td>
-              <td>cell5_3</td>
-              <td>cell5_1</td>
-              <td>cell6_3</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>APIs are not working </Link> </td>
+              <td className="lessBold">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</td>
+              <td>TCS</td>
+              <td>12-12-2021</td>
+              <td>Low</td>
+              <td>2-3-2022</td>
+              <td>Resolved</td>
             </tr>
+            
+           
           </tbody>
         </table>
       </div>
