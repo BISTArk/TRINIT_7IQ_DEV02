@@ -18,4 +18,6 @@ router.route('/deleteBug/:id').delete(deleteBug)
 // get bugs of a particular org
 router.route('/getBug').get(getBug)
 
+router.route('/comment').put()
+
 export default router

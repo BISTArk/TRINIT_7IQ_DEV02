@@ -3,6 +3,7 @@ import bugImg from '../../assets/bug.png'
 import orgImg from '../../assets/bugSvg2.svg'
 import userImg from '../../assets/bugSvg.svg'
 import { NavLink as Link } from "react-router-dom"
+import { Redirect } from "react-router-dom"
 
 
 function Landing() {

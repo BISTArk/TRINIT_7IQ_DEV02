@@ -14,9 +14,11 @@ import {
   SIGNOUT_FAIL,
 } from "../types";
 import { server_base_url } from "../../shared.js";
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export const signUpUser =
-  ({ username, name, email, password }) =>
+  ({ username, name, password }) =>
   async (dispatch) => {
     console.log("signUpUser");
     try {
@@ -29,18 +31,19 @@ export const signUpUser =
           "Content-Type": "application/json",
         },
       };
-
       const { data } = await axios.post(
         url,
-        { username, name, email, password },
+        { username, name, password },
         config
       );
-
+      
       dispatch({
         type: REGISTER_USER_SUCCESS,
         payload: data,
       });
+      toast.success("Successful");
     } catch (error) {
+      
       dispatch({
         type: REGISTER_USER_FAIL,
         payload:
@@ -48,6 +51,7 @@ export const signUpUser =
             ? error.response.data.message
             : error.message,
       });
+      toast.fail(error.message);
     }
   };
 
@@ -65,16 +69,15 @@ export const signUpOrganizer =
           "Content-Type": "application/json",
         },
       };
-
+      console.log(name,password)
       const { data } = await axios.post(url, { name, password }, config);
 
       dispatch({
         type: REGISTER_ORGANIZER_SUCCESS,
         payload: data,
       });
-      console.log(data);
+      toast.success("Successful");
     } catch (error) {
-      console.log(error.response);
       dispatch({
         type: REGISTER_ORGANIZER_FAIL,
         payload:
@@ -82,30 +85,33 @@ export const signUpOrganizer =
             ? error.response.data.message
             : error.message,
       });
+      toast.error(error.response.data.msg);
     }
   };
 
 export const signInOrganizer =
-  ({ username, password }) =>
+  ({ name, password }) =>
   async (dispatch) => {
     try {
       dispatch({
         type: SIGNIN_REQUEST,
       });
-      const url = `${server_base_url}/api/auth/signin`;
+      const url = `${server_base_url}/api/auth/signinOrganizer`;
       const config = {
         headers: {
           "Content-Type": "application/json",
         },
       };
-
-      const { data } = await axios.get(url, { username, password }, config);
+      console.log({ name, password });
+      const { data } = await axios.post(url, { name, password }, config);
 
       dispatch({
         type: SIGNIN_SUCCESS,
         payload: data,
       });
-      
+      toast.success("Successful");
+    window.location.href = "/";
+
     } catch (error) {
       dispatch({
         type: SIGNIN_FAIL,
@@ -114,5 +120,43 @@ export const signInOrganizer =
             ? error.response.data.message
             : error.message,
       });
+      toast.error(error.response.data.msg);
+    }
+  };
+
+export const signInUser =
+  ({ name, password }) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: SIGNIN_REQUEST,
+      });
+      const url = `${server_base_url}/api/auth/signInUser`;
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const { data } = await axios.post(
+        url,
+        { username: name, password },
+        config
+      );
+
+      dispatch({
+        type: SIGNIN_SUCCESS,
+        payload: data,
+      });
+      toast.success("Successful");
+    } catch (error) {
+      dispatch({
+        type: SIGNIN_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+      toast.error(error.response.data.msg);
     }
   };

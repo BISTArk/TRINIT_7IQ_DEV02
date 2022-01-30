@@ -5,6 +5,8 @@ import { signInOrganizer } from "../../redux-store/actions/authAction.js";
 
 import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function LogOrg() {
   const dispatch = useDispatch();
@@ -13,12 +15,12 @@ function LogOrg() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { name, password };
+    const data = { name:name, password:password };
     dispatch(signInOrganizer(data));
   };
 
   return (
-    <div className="regpage">
+    <div className="regpage4">
       <div className="sidepic">
         <Link to="/">
           <img src={back} alt="" className="backImg" />
@@ -75,6 +77,7 @@ function LogOrg() {
           </div>
         </form>
       </div>
+      <ToastContainer autoClose={2000} />
     </div>
   );
 }

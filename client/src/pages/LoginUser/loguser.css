@@ -15,11 +15,11 @@
     font-family: 'Mont';
     src: url('../../assets/fonts/Mont-ExtraLightDEMO.otf');
 }
-.regpage{
+.regpage3{
     display: flex;
     width: 100vw;
     height: 100vh;
-    background-image: url(../../assets/bg2.png);
+    background-image: url(../../assets/ulbg.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
