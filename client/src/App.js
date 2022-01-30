@@ -7,25 +7,23 @@ import Logorg from "./pages/LoginOrg/Logorg.jsx";
 import Loguser from "./pages/LoginUser/Loguser.jsx";
 import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
-import Loglanding from "./pages/LoggedLand/Loglanding";
-import { useSelector } from "react-redux";
-import { signInOrganizer } from "./redux-store/actions/authAction.js";
+import LandingOrg from "./pages/LandingOrg/Land.js";
 
 function App() {
-  const { processing,userInfo, error} = useSelector((state) => state.signIn)
-  console.log(userInfo);
+  // console.log(getState())
   return (
     <Router>
       {/* <Header /> */}
       <main>
         <Routes>
-          <Route path='/register' element={<Register/>} />
-          <Route exact path="/" element={!userInfo ? <Landing /> : <Loglanding />} />
-          <Route path='/regorg' element={<Regorg/>} />
-          <Route path='/logorg' element={<Logorg/>} />
-          <Route path='/loguser' element={<Loguser/>} />
-            <Route path='/reguser' element={<Reguser />} />
-         <Route path='/addbug' element={<AddBug/>} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/regorg" element={<Regorg />} />
+          <Route path="/logorg" element={<Logorg />} />
+          <Route path="/loguser" element={<Loguser />} />
+          <Route path="/reguser" element={<Reguser />} />
+          <Route path="/addbug" element={<AddBug />} />
+          <Route path="/orgDashboard" element={<LandingOrg />} />
         </Routes>
       </main>
       {/* <Footer/> */}
