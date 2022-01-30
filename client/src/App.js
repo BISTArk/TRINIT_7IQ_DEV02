@@ -7,6 +7,7 @@ import Logorg from "./pages/LoginOrg/Logorg.jsx";
 import Loguser from "./pages/LoginUser/Loguser.jsx";
 import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
+import HomeUser from "./pages/UserHome/UserHome";
 import LandingOrg from "./pages/LandingOrg/Land.js";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Landing />} />
           <Route path="/regorg" element={<Regorg />} />
           <Route path="/logorg" element={<Logorg />} />
           <Route path="/loguser" element={<Loguser />} />

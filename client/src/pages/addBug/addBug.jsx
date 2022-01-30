@@ -1,7 +1,7 @@
 import "./addBug.css";
 import { Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-<<<<<<< HEAD
 import{useState,useEffect} from 'react';
 import store from "../../redux-store/store.js";
 
@@ -43,12 +43,7 @@ function AddBug() {
     })
 
   }
-
-=======
-import { Link } from "react-router-dom";
-function addBug() {
->>>>>>> d03ca940767f0f44d5546780ff58293efb23e5cd
-  return (
+return(
     <div>
       <div className="headerForm">
         <h1 className="headerFormh1">Raise a Bug</h1>
@@ -83,23 +78,17 @@ function addBug() {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
         <div className="buttonBoot">
-<<<<<<< HEAD
           <Button variant="primary" onClick={handleClick}>
-            Raise
-          </Button>
-          <Button variant="primary">Cancel</Button>
-=======
-          <Button variant="primary" type="submit">
             Raise
           </Button>
           <Link to="/home">
             <Button variant="primary">Cancel</Button>
           </Link>
->>>>>>> d03ca940767f0f44d5546780ff58293efb23e5cd
         </div>
       </Form>
     </div>
   );
 }
+
 
 export default AddBug;
