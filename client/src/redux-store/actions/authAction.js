@@ -151,7 +151,7 @@ export const signInUser =
         payload: data,
       });
       toast.success("Successful");
-    window.location.href = "/orgDashboard";
+    window.location.href = "/home";
     } catch (error) {
       dispatch({
         type: SIGNIN_FAIL,
