@@ -106,7 +106,7 @@ export const getBug = expressAsyncHandler(async (req, res) => {
 });
 
 // PUT comment
-export const getBug = expressAsyncHandler(async (req, res) => {
+export const putComment = expressAsyncHandler(async (req, res) => {
   const comment = {
     commentMessage: req.body.comment,
     commentBy: req.user.id,
