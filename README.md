@@ -18,6 +18,13 @@
 3. Users
  
 > Key Features
+1. **Authorization**
+   An organization and users can register into the web application, and then login to access all functunalities. Passwords are hashed and only then stored in the database for users' security.
+2. **Dashboard**
+   User specific dashboards are rendered whenever a user logs into the application.
+3. **Raising a bug**
+   Bugs can be raised by any user through the user dashboard
+
 
 >To run application:
 ```
