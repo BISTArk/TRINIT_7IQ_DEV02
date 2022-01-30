@@ -37,17 +37,21 @@ function Home() {
             </tr>
           </thead>
           <tbody>
+           
             <tr>
-              <td>cell1_1</td>
+            
+                <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
+               
               <td>cell2_1</td>
               <td>cell3_1</td>
               <td>cell4_1</td>
               <td>cell5_1</td>
               <td>cell5_1</td>
               <td>cell6_1</td>
-            </tr>
+              </tr>
+              
             <tr>
-              <td>cell1_2</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
               <td>cell2_2</td>
               <td>cell3_2</td>
               <td>cell4_2</td>
@@ -56,7 +60,7 @@ function Home() {
               <td>cell6_2</td>
             </tr>
             <tr>
-              <td>cell1_3</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
               <td>cell2_3</td>
               <td>cell3_3</td>
               <td>cell4_3</td>
@@ -83,7 +87,7 @@ function Home() {
           </thead>
           <tbody>
             <tr>
-              <td>cell1_1</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
               <td>cell2_1</td>
               <td>cell3_1</td>
               <td>cell4_1</td>
@@ -92,7 +96,7 @@ function Home() {
               <td>cell6_1</td>
             </tr>
             <tr>
-              <td>cell1_2</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
               <td>cell2_2</td>
               <td>cell3_2</td>
               <td>cell4_2</td>
@@ -101,7 +105,7 @@ function Home() {
               <td>cell6_2</td>
             </tr>
             <tr>
-              <td>cell1_3</td>
+            <td className="showbugg"> <Link to="/show" style={{textDecoration: "none", color:"black"}}>cell1_1 </Link> </td>
               <td>cell2_3</td>
               <td>cell3_3</td>
               <td>cell4_3</td>

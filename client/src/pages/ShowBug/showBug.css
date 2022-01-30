@@ -1,0 +1,100 @@
+:root{
+    --blue: #007bff;
+    --dark:#343a40;
+    --gray-dark: #343a40;
+    --red: #dc3545;
+    --purple: #6f42c1;
+    --yellow: #ffc107;
+    --darkyellow: #ebb002;
+    --lightblue: #17a2b8;
+    --green:#28a745;
+  }
+.pageTitle{
+    padding-top: 150px;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+ }
+ .bookDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 500px 80px 500px; 
+    padding: 50px;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0px 3px 40px -5px rgba(0, 0, 0, 0.274);
+    -webkit-box-shadow: 0px 3px 40px -5px rgba(0, 0, 0, 0.109);
+    -moz-box-shadow: 0px 3px 40px -5px rgba(0, 0, 0, 0.13);
+  }
+  .bookDetails:hover{
+    box-shadow: 0px 3px 40px -5px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 0px 3px 40px -5px rgba(0, 0, 0, 0.746);
+    -moz-box-shadow: 0px 3px 40px -5px rgba(0,0,0,0.68);
+  }
+  .detailsGrid{
+    display: grid;
+    position: relative;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    grid-gap: 20px 30px;
+    
+  }
+  .bookLabel{
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .bookLabel1{
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  .buttonRowShow{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .updateButton{
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    color: #000;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .updateButton:hover{
+   
+    background-color: var(--darkyellow);
+   
+  }
+  .cancelButton{
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-color: #17a2b8;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #17a2b8;
+    padding: 10px 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    color: var(--lightblue);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  .cancelButton:hover{
+    background-color:var(--lightblue) ;
+    color: white;
+  }

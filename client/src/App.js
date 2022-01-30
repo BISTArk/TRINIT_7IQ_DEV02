@@ -9,6 +9,7 @@ import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
 import HomeUser from "./pages/UserHome/UserHome";
 // import LandingOrg from "./pages/LandingOrg/Land.js";
+import ShowBug from "./pages/ShowBug/showBug.jsx";
 
 function App() {
   // console.log(getState())
@@ -24,8 +25,9 @@ function App() {
           <Route path="/loguser" element={<Loguser />} />
           <Route path="/reguser" element={<Reguser />} />
           <Route path="/addbug" element={<AddBug />} />
-          <Route path="/home" element = {<HomeUser/>} />
-          {/* <Route path="/orgDashboard" element={<LandingOrg />} /> */}
+          <Route path="/home" element={<HomeUser />} />
+          <Route path="/show" element={<ShowBug />} />
+        
         </Routes>
       </main>
       {/* <Footer/> */}
