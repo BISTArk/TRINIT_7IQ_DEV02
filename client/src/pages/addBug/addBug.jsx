@@ -2,11 +2,10 @@ import "./addBug.css";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import{useState,useEffect} from 'react';
-import { useSelector } from "react-redux";
+import store from "../../redux-store/store.js";
 
 function AddBug() {
-
-  const { processing,userInfo, error} = useSelector((state) => state.signIn)
+  const userInfo = store.getState().signIn.userInfo;
 
   const [formd, setFormd] = useState({
     title: "",

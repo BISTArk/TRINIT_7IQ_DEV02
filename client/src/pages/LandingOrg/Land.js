@@ -9,7 +9,7 @@ const LandingOrg = () => {
   console.log(userInfo)
   return (
     <>
-      <p>hi {userInfo.name}</p>
+      {/* <p>hi {userInfo.name}</p> */}
 
     </>
   );
