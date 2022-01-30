@@ -23,6 +23,9 @@
 3. **Raising a bug** Bugs can be raised by any user through the user dashboard
 4. **CRUD apis for bug module** APIs for creating, reading, updating (threat levels and lifecycle), and deleting, bugs have been prepared. Only authorized employees can update the life cycle and threat level of a bug.
 
+> Video Prototype
+> https://drive.google.com/drive/folders/1eXkQ548TJR6U7o3hNzmc-jlR5kApePwB?usp=sharing
+
 >To run application:
 ```
 npm i
@@ -41,5 +44,3 @@ Create a .env.local file inside client directory to store environmental variable
 REACT_APP_SERVER_BASE_URL = http://localhost:5000
 ```
 
-> Video Prototype
-> https://drive.google.com/drive/folders/1eXkQ548TJR6U7o3hNzmc-jlR5kApePwB?usp=sharing
