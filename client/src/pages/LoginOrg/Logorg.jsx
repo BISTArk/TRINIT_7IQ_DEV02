@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./logorg.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { signInOrganizer } from "../../redux-store/actions/authAction.js";
-
+import { useNavigate } from "react-router-dom";
 import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 function LogOrg() {
   const dispatch = useDispatch();
+  const history = useNavigate();
   const [name, setname] = useState("");
   const [password, setpassword] = useState("");
+
+  const { processing,userInfo, error} = useSelector((state) => state.signIn)
+  useEffect(() =>{
+    if(userInfo){
+      history('/orgDashboard', { replace: true })
+    }
+},[userInfo, history])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
