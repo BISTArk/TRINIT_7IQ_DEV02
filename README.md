@@ -19,9 +19,20 @@
  
 > Key Features
 
-> To run application:
+>To run application:
 ```
 npm i
 cd client
 npm i
+```
+Create a .env file to store environmental variables
+```
+PORT = 5000
+NODE_ENV = development
+MONGO_URI = {mongodb atlas uri}
+JWT_SECRET = {}
+```
+Create a .env.local file inside client directory to store environmental variables
+```
+REACT_APP_SERVER_BASE_URL = http://localhost:5000
 ```
