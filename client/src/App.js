@@ -7,26 +7,27 @@ import Logorg from "./pages/LoginOrg/Logorg.jsx";
 import Loguser from "./pages/LoginUser/Loguser.jsx";
 import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
+import LandingOrg from "./pages/LandingOrg/Land.js";
 
 function App() {
-    // console.log(getState())
-    return (
+  // console.log(getState())
+  return (
     <Router>
       {/* <Header /> */}
       <main>
         <Routes>
-          <Route path='/register' element={<Register/>} />
-          <Route path='/' element={<Landing/>} />
-          <Route path='/regorg' element={<Regorg/>} />
-          <Route path='/logorg' element={<Logorg/>} />
-          <Route path='/loguser' element={<Loguser/>} />
-            <Route path='/reguser' element={<Reguser />} />
-         <Route path='/addbug' element={<AddBug/>} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/regorg" element={<Regorg />} />
+          <Route path="/logorg" element={<Logorg />} />
+          <Route path="/loguser" element={<Loguser />} />
+          <Route path="/reguser" element={<Reguser />} />
+          <Route path="/addbug" element={<AddBug />} />
+          <Route path="/orgDashboard" element={<LandingOrg />} />
         </Routes>
       </main>
       {/* <Footer/> */}
     </Router>
-
   );
 }
 
