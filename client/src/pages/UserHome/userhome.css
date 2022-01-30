@@ -1,0 +1,87 @@
+.bugImgHome{
+    width: 7rem;
+    height: 7rem;
+}
+@font-face {
+    font-family: 'MontNormal';
+    src: url('../../assets/fonts/Mont-Trial-Bold.otf');
+}
+@font-face {
+    font-family: 'MontSemi';
+    src: url('../../assets/fonts/Mont-Trial-SemiBold.otf');
+}
+@font-face {
+    font-family: 'Mont';
+    src: url('../../assets/fonts/Mont-ExtraLightDEMO.otf');
+}
+.headerHome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+}
+.homePage{
+  
+    width: 100vw;
+    height: 100vh; 
+    background-image: url(../../assets/bg6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.homeh1{
+    position: relative;
+    font-family: 'MontNormal';
+    white-space: pre-line;
+    font-size: 3.3rem;
+    font-weight: 500;
+    color: #8B73FF;
+}
+.buttonHome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding-top: 4rem;
+    gap: 1rem;
+}
+.assigned{
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    padding: 1.7rem;
+}
+table{
+    /* border-collapse: collapse; */
+}
+h3{
+    font-family: 'MontSemi';
+    font-size: 1.2rem;
+    color: #8B73FF;
+    
+}
+table.unstyledTable {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+table.unstyledTable td, table.unstyledTable th {
+    border: 0.2rem solid #000000;  
+}
+table.unstyledTable thead {
+  background: #CB6CE6;
+  color: #FFFFFF;
+  font-family: 'MontSemi';
+}
+table.unstyledTable thead th {
+  font-weight: normal;
+  font-size: 1.8rem;
+  padding: 1.8rem;
+}
+th,td{
+                  
+                text-align:center;
+                border:1px solid black;
+                padding:5px
+}

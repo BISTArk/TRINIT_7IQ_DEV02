@@ -1,6 +1,7 @@
 import "./addBug.css";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 function addBug() {
   return (
     <div>
@@ -34,19 +35,15 @@ function addBug() {
             <option value="3">Three</option>
           </Form.Select>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-
-              </Form.Group>
-              <div className="buttonBoot">
-                  <Button variant="primary" type="submit" >
-                      
-          Raise
-                  </Button>
-                  <Button variant="primary"  >
-                      
-                      Cancel
-                              </Button>
-                  </div>
+        <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
+        <div className="buttonBoot">
+          <Button variant="primary" type="submit">
+            Raise
+          </Button>
+          <Link to="/home">
+            <Button variant="primary">Cancel</Button>
+          </Link>
+        </div>
       </Form>
     </div>
   );
