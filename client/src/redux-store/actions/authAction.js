@@ -110,7 +110,7 @@ export const signInOrganizer =
         payload: data,
       });
       toast.success("Successful");
-    window.location.href = "/";
+    window.location.href = "/orgDashboard";
 
     } catch (error) {
       dispatch({
