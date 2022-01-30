@@ -21,6 +21,7 @@ app.use("/api/auth", authRoutes);
 // bug routes
 app.use("/api/bug", bugsRoute);
 
+
 const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,

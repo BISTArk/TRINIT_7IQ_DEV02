@@ -5,7 +5,7 @@ import Bugs from "../models/bugModel.js";
 
 // POST new bug
 export const createBug = expressAsyncHandler(async (req, res) => {
-  const { title, content, authorName, authorIsUser } = req.body;
+  const { title, content, authorName, authorIsUser, organization } = req.body;
   if (!authorName) {
     res.status(401).send({ msg: "Unauthorized access." });
     throw new Error("Unauthorized access.");
@@ -15,6 +15,7 @@ export const createBug = expressAsyncHandler(async (req, res) => {
     title,
     content,
     author: { name: authorName, isUser: authorIsUser },
+    organization,
   });
   if (newBug) {
     res.status(201).json(newBug);
@@ -99,6 +100,24 @@ export const getBug = expressAsyncHandler(async (req, res) => {
   const bugs = await Bugs.find({});
   if (bugs) {
     res.json(bugs);
+  } else {
+    res.status(404);
+    throw new Error("Error");
+  }
+});
+
+export const getsomeBug = expressAsyncHandler(async (req, res) => {
+  const { bugs } = req.body;
+
+  let sendBugs = [];
+  bugs.forEach(async(bug) => {
+    bug = await Bugs.findOne({ _id: bug });
+    if (bug) {
+      sendBugs.push(bug);
+  }
+});
+  if (sendBugs.length > 0) {
+    res.json(sendBugs);
   } else {
     res.status(404);
     throw new Error("Error");
