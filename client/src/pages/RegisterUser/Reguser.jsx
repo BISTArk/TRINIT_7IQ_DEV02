@@ -4,6 +4,8 @@ import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../../redux-store/actions/authAction.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function RegUser() {
   const dispatch = useDispatch();
@@ -19,7 +21,6 @@ function RegUser() {
 
   return (
     <div className="regpage2">
-      
       <div className="sidepic">
       <Link to="/">
           <img src={back} alt="" className="backImg" />
@@ -94,6 +95,7 @@ function RegUser() {
           </div>
         </form>
       </div>
+      <ToastContainer autoClose={2000} />
     </div>
   );
 }

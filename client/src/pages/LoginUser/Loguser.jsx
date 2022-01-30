@@ -4,6 +4,8 @@ import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { signInUser } from "../../redux-store/actions/authAction.js";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function LogUser() {
 
@@ -75,6 +77,7 @@ function LogUser() {
                 </div>
           </form>
       </div>
+      <ToastContainer autoClose={2000} />
   </div>;
 }
 
