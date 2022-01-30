@@ -110,6 +110,8 @@ export const signInOrganizer =
         payload: data,
       });
       toast.success("Successful");
+    window.location.href = "/";
+
     } catch (error) {
       dispatch({
         type: SIGNIN_FAIL,
