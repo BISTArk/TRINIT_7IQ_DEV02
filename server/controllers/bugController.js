@@ -104,3 +104,30 @@ export const getBug = expressAsyncHandler(async (req, res) => {
     throw new Error("Error");
   }
 });
+
+// PUT comment
+export const getBug = expressAsyncHandler(async (req, res) => {
+  const comment = {
+    commentMessage: req.body.comment,
+    commentBy: req.user.id,
+  };
+  Bugs.findByIdAndUpdate(
+    req.body.bug_id,
+    {
+      $push: { comments: comment },
+    },
+    {
+      new: true,
+    }
+  )
+    .populate("comments.commentBy", "username _id")
+    .exec((err, result) => {
+      if (err) {
+        return res.status(401).json({ error: err });
+      } else {
+        console.log("success");
+        res.json(result);
+      }
+    });
+
+});

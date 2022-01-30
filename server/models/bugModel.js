@@ -24,7 +24,12 @@ const bugsSchema = mongoose.Schema(
     author: {
         name: {type: String, required: true},
         isUser: {type: Boolean, required: true},
-    }
+    },
+    comments : [{
+      commentMessage: {type: String, required: true},
+      commentBy: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'User'},
+      commentAt: {type: Date, default: Date.now}
+  }]
   },
   {
     timestamps: true,
