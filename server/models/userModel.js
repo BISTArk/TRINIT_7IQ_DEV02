@@ -29,6 +29,11 @@ const userSchema = mongoose.Schema(
       required: true,
       ref: "Bugs",
     },
+    assignBugs: {
+      type: [mongoose.Schema.Types.ObjectId],
+      required: true,
+      ref: "Bugs",
+    },
   },
   {
     timestamps: true,

@@ -21,6 +21,9 @@ const bugsSchema = mongoose.Schema(
       type: Number,
       enum: [1, 2, 3, 4],
     },
+    organization:{
+      type: mongoose.Schema.Types.ObjectId,
+    },
     author: {
         name: {type: String, required: true},
         isUser: {type: Boolean, required: true},
