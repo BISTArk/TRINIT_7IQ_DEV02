@@ -8,6 +8,8 @@ import Loguser from "./pages/LoginUser/Loguser.jsx";
 import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
 import HomeUser from "./pages/UserHome/UserHome";
+// import LandingOrg from "./pages/LandingOrg/Land.js";
+import ShowBug from "./pages/ShowBug/showBug.jsx";
 import LandingOrg from "./pages/LandingOrg/Land.js";
 
 function App() {
@@ -23,7 +25,10 @@ function App() {
           <Route path="/loguser" element={<Loguser />} />
           <Route path="/reguser" element={<Reguser />} />
           <Route path="/addbug" element={<AddBug />} />
-          <Route path="/home" element = {<HomeUser/>} />
+          <Route path="/home" element={<HomeUser />} />
+          <Route path="/show" element={<ShowBug />} />
+        
+          {/* <Route path="/home" element = {<HomeUser/>} /> */}
           <Route path="/orgDashboard" element={<LandingOrg />} />
         </Routes>
       </main>
