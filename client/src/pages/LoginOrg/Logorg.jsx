@@ -13,7 +13,7 @@ function LogOrg() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { username:name, password:password };
+    const data = { name:name, password:password };
     dispatch(signInOrganizer(data));
   };
 

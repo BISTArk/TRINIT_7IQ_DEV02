@@ -65,8 +65,8 @@ export const signUpOrganizer =
           "Content-Type": "application/json",
         },
       };
-
-      const { data } = await axios.post(url, { name, password }, config);
+      console.log(name,password)
+      const { data } = await axios.post(url, { username: name, password }, config);
 
       dispatch({
         type: REGISTER_ORGANIZER_SUCCESS,
@@ -86,20 +86,55 @@ export const signUpOrganizer =
   };
 
 export const signInOrganizer =
-  ({ username, password }) =>
+  ({ name, password }) =>
   async (dispatch) => {
     try {
       dispatch({
         type: SIGNIN_REQUEST,
       });
-      const url = `${server_base_url}/api/auth/signin`;
+      const url = `${server_base_url}/api/auth/signinOrganizer`;
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      console.log({ name, password });
+      const { data } = await axios.post(url, { name, password }, config);
+
+      dispatch({
+        type: SIGNIN_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      dispatch({
+        type: SIGNIN_FAIL,
+        payload:
+          error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message,
+      });
+    }
+  };
+
+export const signInUser =
+  ({ name, password }) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: SIGNIN_REQUEST,
+      });
+      const url = `${server_base_url}/api/auth/signInUser`;
       const config = {
         headers: {
           "Content-Type": "application/json",
         },
       };
 
-      const { data } = await axios.get(url, { username, password }, config);
+      const { data } = await axios.post(
+        url,
+        { username: name, password },
+        config
+      );
 
       dispatch({
         type: SIGNIN_SUCCESS,

@@ -3,7 +3,7 @@ import "./loguser.css"
 import back from "../../assets/back.png";
 import { NavLink as Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { signInOrganizer } from "../../redux-store/actions/authAction.js";
+import { signInUser } from "../../redux-store/actions/authAction.js";
 
 function LogUser() {
 
@@ -14,7 +14,7 @@ function LogUser() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       const data = {name,password};
-      dispatch(signInOrganizer(data));
+      dispatch(signInUser(data));
     };
 
   return <div className="regpage3">

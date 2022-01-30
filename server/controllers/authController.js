@@ -4,23 +4,17 @@ import expressAsyncHandler from "express-async-handler";
 
 // POST sign up user
 export const signUpUser = expressAsyncHandler(async (req, res) => {
-  const { username, name, email, password } = req.body;
-  const user_emailCheck = await User.findOne({ email });
-  if (user_emailCheck) {
-    res.status(401).send({ msg: "This email is already registered." });
-    throw new Error("This email is already registered.");
-  }
+  const { username, name, password } = req.body;
   const user_usernameCheck = await User.findOne({ username });
   if (user_usernameCheck) {
     res.status(401).send({ msg: "This username is already taken." });
     throw new Error("This username is already taken.");
   }
-  const newUser = await User.create({ username, name, email, password });
+  const newUser = await User.create({ username, name, password });
   if (newUser) {
     res.status(201).json({
       name: newUser.name,
       username: newUser.username,
-      email: newUser.email,
       bugs: newUser.bugs,
       employee: newUser.employee,
       _id: newUser._id,
@@ -52,35 +46,65 @@ export const signupOrganizer = expressAsyncHandler(async (req, res) => {
   }
 });
 
-// GET sign in user+organizer
-export const signIn = expressAsyncHandler(async (req, res) => {
+// GET sign in user
+export const signInUser = expressAsyncHandler(async (req, res) => {
+  
   const { username, password } = req.body;
+  console.log({ username, password })
   const user = await User.findOne({ username });
-  if(user && (await user.passwordVerification(password))){
+  if (!user) {
+    res.status(401).send({ msg: "User does not exists." });
+    throw new Error("User does not exists.");
+  } else if (user && (await user.passwordVerification(password))) {
     res.status(201).send({
       name: user.name,
       username: user.username,
-      email: user.email,
       bugs: user.bugs,
       employee: user.employee,
       _id: user._id,
-    })
+      employeeLevel: user.employeeLevel,
+      organization: user.organization,
+    });
+  } else {
+    res
+      .status(401)
+      .send({ msg: "Invalid combination of username and password" });
+    throw new Error("Invalid combination of username and password");
   }
-  else{
+});
+
+export const signInOrganizer = expressAsyncHandler(async (req, res) => {
+  const { name, password } = req.body;
+  console.log(req.body)
+  const organizer = await Organizer.findOne({ name });
+  console.log(organizer)
+  if (!organizer) {
+    res.status(401).send({ msg: "organizer does not exists." });
+    throw new Error("organizer does not exists.");
+  } else if (organizer && (await organizer.passwordVerification(password))) {
+    res.status(201).send({
+      name: organizer.name,
+      bugs: organizer.bugs,
+      employee: organizer.employee,
+      _id: organizer._id,
+    });
+  } else {
     const organizer = await Organizer.findOne({ name: username });
     if (!organizer) {
-      res.status(401).send({ msg: "User/organization does not exists." });
-      throw new Error("User does not exists.");
+      res.status(401).send({ msg: "organization does not exists." });
+      throw new Error("organization does not exists.");
     }
-    if(organizer && (await organizer.passwordVerification(password))){
+    if (organizer && (await organizer.passwordVerification(password))) {
       res.status(201).send({
         name: organizer.name,
         bugs: organizer.bugs,
         _id: organizer._id,
-      })
+      });
     }
-    res.status(401).send({msg: "Invalid combination of username and password"})
-    throw new Error ("Invalid combination of username and password")
+    res
+      .status(401)
+      .send({ msg: "Invalid combination of username and password" });
+    throw new Error("Invalid combination of username and password");
   }
 });
 
