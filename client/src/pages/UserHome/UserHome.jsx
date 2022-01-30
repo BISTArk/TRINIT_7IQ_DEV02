@@ -2,10 +2,33 @@ import "./userhome.css";
 import { Button } from "react-bootstrap";
 import bugImg from "../../assets/bug.png";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import store from "../../redux-store/store.js";
+
 function Home() {
+  const userInfo = store.getState().signIn.userInfo;
   function handleLogout() {
     alert("Do you want to logout?");
   }
+
+  const [bugs, setBugs] = useState([]);
+
+  useEffect(async () => {
+    let x = { bugs: userInfo.bugs };
+
+    //fetch post
+    let info = await fetch("http://localhost:5000/api/bug/getsomeBug", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(x),
+    });
+    let data = await info.json();
+    console.log(data);
+    setBugs(data);
+  }, []);
+
   return (
     <div className="homePage">
       <div className="headerHome">
@@ -68,8 +91,8 @@ function Home() {
         </table>
       </div>
       <div className="allBugs">
-              <h1 className="assigned">All Bugs</h1>
-               <table class="unstyledTable">
+        <h1 className="assigned">All Bugs</h1>
+        <table class="unstyledTable">
           <thead>
             <tr>
               <th>Bug Title</th>

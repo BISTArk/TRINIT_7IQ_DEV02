@@ -7,18 +7,21 @@ import store from "../../redux-store/store.js";
 
 function AddBug() {
   const userInfo = store.getState().signIn.userInfo;
-
+  console.log(userInfo);
   const [formd, setFormd] = useState({
     title: "",
     content: "",
     organization: null,
   });
+  const [orgs, setOrgs] = useState([]);
 
-  useEffect(() => {
+  useEffect(async() => {
   
-    return () => {
-      
-    };
+      //fetch get
+      let info = await fetch("http://localhost:5000/api/bug/getallOrg");
+      let data = await info.json();
+      console.log(data);
+      setOrgs(data.orgs);
   }, []);
   
 
@@ -70,10 +73,9 @@ return(
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Organization</Form.Label>
           <Form.Select aria-label="Default select example" onChange={(e)=>setFormd({...formd,organization:e.target.value})}>
-            <option>Organization list</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {orgs.map((org) => (
+              <option value={org.id}>{org.name}</option>
+            ))}
           </Form.Select>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicCheckbox"></Form.Group>
