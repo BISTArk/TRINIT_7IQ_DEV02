@@ -7,8 +7,11 @@ import store from "../../redux-store/store.js";
 
 function Home() {
   const userInfo = store.getState().signIn.userInfo;
+  console.log(userInfo)
   function handleLogout() {
-    alert("Do you want to logout?");
+    if (window.confirm("Do you want to logout?")) {
+      window.location.href = "/loguser";
+    }
   }
 
   const [bugs, setBugs] = useState([]);
