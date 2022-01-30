@@ -5,6 +5,7 @@ import Landing from "./pages/Landing/Landing.jsx";
 import Regorg from "./pages/RegisterOrg/Regorg.jsx";
 import Logorg from "./pages/LoginOrg/Logorg.jsx";
 import Loguser from "./pages/LoginUser/Loguser.jsx";
+import AddBug from "./pages/addBug/addBug.jsx";
 import Reguser from "./pages/RegisterUser/Reguser.jsx";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path='/regorg' element={<Regorg/>} />
           <Route path='/logorg' element={<Logorg/>} />
           <Route path='/loguser' element={<Loguser/>} />
-          <Route path='/reguser' element={<Reguser/>} />
+            <Route path='/reguser' element={<Reguser />} />
+         <Route path='/addbug' element={<AddBug/>} />
         </Routes>
       </main>
       {/* <Footer/> */}
