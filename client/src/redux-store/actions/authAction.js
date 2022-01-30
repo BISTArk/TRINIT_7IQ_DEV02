@@ -77,6 +77,8 @@ export const signUpOrganizer =
         payload: data,
       });
       toast.success("Successful");
+    window.location.href = "/orgDashboard";
+
     } catch (error) {
       dispatch({
         type: REGISTER_ORGANIZER_FAIL,
@@ -149,6 +151,7 @@ export const signInUser =
         payload: data,
       });
       toast.success("Successful");
+    window.location.href = "/orgDashboard";
     } catch (error) {
       dispatch({
         type: SIGNIN_FAIL,
